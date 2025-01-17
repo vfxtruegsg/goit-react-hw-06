@@ -1,8 +1,12 @@
 import cntStyles from "./Contact.module.css";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdPerson } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { deleteContact } from "../../redux/contactsSlice";
 
-const Contact = ({ id, name, number, deleteNumber }) => {
+const Contact = ({ id, name, number }) => {
+  const dispatch = useDispatch();
+  const deleteNumber = () => dispatch(deleteContact(id));
   return (
     <li className={cntStyles["contact-block"]} key={id}>
       <div>

@@ -1,17 +1,16 @@
 import sboxStyles from "./SearchBox.module.css";
 import { useId } from "react";
-
-const SearchBox = ({ value, onFindName }) => {
+import { changeFilter } from "../../redux/filtersSlice";
+import { useDispatch } from "react-redux";
+const SearchBox = () => {
+  const dispatch = useDispatch();
   const searchFieldId = useId();
   return (
     <div className={sboxStyles["search-container"]}>
       <label htmlFor={searchFieldId}> Find contacts by name</label>
       <input
         className={sboxStyles["search-field"]}
-        id={searchFieldId}
-        type="text"
-        value={value}
-        onChange={(e) => onFindName(e.target.value)}
+        onChange={(e) => dispatch(changeFilter(e.target.value))}
         placeholder="....."
       />
     </div>
