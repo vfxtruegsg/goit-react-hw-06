@@ -21,7 +21,7 @@ const Contact = ({ id, name, number }) => {
       </div>
       <button
         type="button"
-        onClick={() => deleteNumber(id)}
+        onClick={deleteNumber}
         className={cntStyles["del-btn"]}
       >
         Delete
