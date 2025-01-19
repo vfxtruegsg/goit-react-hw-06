@@ -11,12 +11,12 @@ const Contact = ({ id, name, number }) => {
     <li className={cntStyles["contact-block"]} key={id}>
       <div>
         <div className={cntStyles["inf-sec"]}>
-          <MdPerson />
-          <p>{name}</p>
+          <MdPerson className={cntStyles["inf-sec-hover"]} />
+          <p className={cntStyles["inf-sec-hover"]}>{name}</p>
         </div>
         <div className={cntStyles["inf-sec"]}>
-          <BsFillTelephoneFill />
-          <p>{number}</p>
+          <BsFillTelephoneFill className={cntStyles["inf-sec-hover"]} />
+          <p className={cntStyles["inf-sec-hover"]}>{number}</p>
         </div>
       </div>
       <button

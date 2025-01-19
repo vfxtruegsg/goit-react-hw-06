@@ -48,7 +48,7 @@ const ContactForm = () => {
             type="text"
             name="name"
             id={nameFieldId}
-            style={{ padding: "8px 16px", borderRadius: 6 }}
+            className={formStyles["input-field"]}
           />
           <ErrorMessage
             className={formStyles["error"]}
@@ -63,7 +63,7 @@ const ContactForm = () => {
             name="number"
             id={numberFieldId}
             placeholder="xxx-xx-xx"
-            style={{ padding: "8px 16px", borderRadius: 6 }}
+            className={formStyles["input-field"]}
           />
           <ErrorMessage
             className={formStyles["error"]}

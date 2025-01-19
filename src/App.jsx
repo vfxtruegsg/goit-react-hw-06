@@ -6,7 +6,7 @@ import ContactForm from "./components/ContactForm/ContactForm";
 function App() {
   return (
     <>
-      <h1>Phonebook</h1>
+      <h1 style={{ textAlign: "center", marginBottom: 18 }}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
       <ContactList />
